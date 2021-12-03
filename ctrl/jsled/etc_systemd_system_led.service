@@ -1,0 +1,13 @@
+[Unit]
+Description=Start LED control
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+RestartSec=10
+EnvironmentFile=-/etc/default/led
+WorkingDirectory=/usr/bin
+RemainAfterExit=yes
+ExecStart=/usr/bin/jsLed

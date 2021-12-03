@@ -1,0 +1,2 @@
+LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libstdc++.so.jsLed
+

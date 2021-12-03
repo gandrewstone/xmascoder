@@ -1,0 +1,218 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_types.h"
+#include "xil_io.h"
+
+#define NUM_LEDS 6000
+#define LEDS_PER_STRAND 1000
+
+int color_index = 0;
+short rot_index = 0;
+short case_ID = 0;
+char initialized = 0;
+char prev_btn_st = 0;
+int fader = 0;
+char count_up;
+int gasCount = 0;
+
+XGpio Gpio;
+
+
+// If in RGB mode use this API
+void SetRGBColor(int led, int16_t red, int16_t grn, int16_t blu);
+
+void EnableLEDs(void)
+{
+	Xil_Out32(XPAR_WS2811FADER_0_S00_AXI_BASEADDR, 1);
+	//Xil_Out32(XPAR_DIGILED_1_S00_AXI_BASEADDR, 1);
+	//Xil_Out32(XPAR_DIGILED_2_S00_AXI_BASEADDR, 1);
+	//Xil_Out32(XPAR_DIGILED_3_S00_AXI_BASEADDR, 1);
+
+	//Xil_Out32(XPAR_DIGILED_4_S00_AXI_BASEADDR, 1);
+	//Xil_Out32(XPAR_DIGILED_5_S00_AXI_BASEADDR, 1);
+/*
+	Xil_Out32(XPAR_DIGILED_6_S00_AXI_BASEADDR, 1);
+	Xil_Out32(XPAR_DIGILED_7_S00_AXI_BASEADDR, 1);
+	*/
+}
+
+void DisableLEDs(void)
+{
+	Xil_Out32(XPAR_WS2811FADER_0_S00_AXI_BASEADDR, 0);
+	//Xil_Out32(XPAR_DIGILED_1_S00_AXI_BASEADDR, 0);
+	//Xil_Out32(XPAR_DIGILED_2_S00_AXI_BASEADDR, 0);
+	//Xil_Out32(XPAR_DIGILED_3_S00_AXI_BASEADDR, 0);
+	//Xil_Out32(XPAR_DIGILED_4_S00_AXI_BASEADDR, 0);
+	//Xil_Out32(XPAR_DIGILED_5_S00_AXI_BASEADDR, 0);
+/*	Xil_Out32(XPAR_DIGILED_6_S00_AXI_BASEADDR, 0);
+	Xil_Out32(XPAR_DIGILED_7_S00_AXI_BASEADDR, 0);
+	*/
+}
+
+void SetRGBColor(int led, int16_t red, int16_t grn, int16_t blu)
+{
+	// saturating
+	if (red < 0) red=0;
+	if (grn < 0) grn=0;
+	if (blu < 0) blu=0;
+	if (red > 255) red=255;
+	if (grn > 255) grn=255;
+	if (blu > 255) blu=255;
+
+	if (led<LEDS_PER_STRAND)
+        Xil_Out32((XPAR_DIGILED_0_S00_AXI_BASEADDR+(4*(led+1))), (grn<<16) | (red<<8) | blu);
+/*
+	else if (led<LEDS_PER_STRAND*2)
+        Xil_Out32((XPAR_DIGILED_1_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND)+1))), (grn<<16) | (red<<8) | blu);
+	else if (led<LEDS_PER_STRAND*3)
+        Xil_Out32((XPAR_DIGILED_2_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND*2)+1))), (grn<<16) | (red<<8) | blu);
+	else if (led<LEDS_PER_STRAND*4)
+        Xil_Out32((XPAR_DIGILED_3_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND*3)+1))), (grn<<16) | (red<<8) | blu);
+
+	else if (led<LEDS_PER_STRAND*5)
+        Xil_Out32((XPAR_DIGILED_4_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND*4)+1))), (grn<<16) | (red<<8) | blu);
+	else if (led<LEDS_PER_STRAND*6)
+        Xil_Out32((XPAR_DIGILED_5_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND*5)+1))), (grn<<16) | (red<<8) | blu);
+*/
+/*
+ 	else if (led<LEDS_PER_STRAND*7)
+        Xil_Out32((XPAR_DIGILED_6_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND*6)+1))), (grn<<16) | (red<<8) | blu);
+	else if (led<LEDS_PER_STRAND*8)
+        Xil_Out32((XPAR_DIGILED_7_S00_AXI_BASEADDR+(4*(led-(LEDS_PER_STRAND*7)+1))), (grn<<16) | (red<<8) | blu);
+*/
+}
+
+
+int count=0;
+void mytest(void)
+{
+	int i;
+
+	count++;
+	if (count >= 255) count = 0;
+	for (i=0;i<NUM_LEDS;i++)
+    	SetRGBColor(i, 0,0,count);
+}
+
+int16_t leds[NUM_LEDS][3];
+void test2(void)
+{
+	static int red=0,grn=0,blu=0;
+	static int dred=5, dgrn=4, dblu=3;
+
+	red=red+dred;
+	grn=grn+dgrn;
+	blu=blu+dblu;
+
+	if (red<0)
+	{
+	    red=0;
+	    dred *= -1;
+	}
+	if (grn<0)
+	{
+	    grn=0;
+	    dgrn *= -1;
+	}
+	if (blu<0)
+	{
+	    blu=0;
+	    dblu *= -1;
+	}
+
+	if (red>255)
+	{
+	    red=255;
+	    dred *= -1;
+	}
+	if (grn>255)
+	{
+	    grn=255;
+	    dgrn *= -1;
+	}
+	if (blu>255)
+	{
+	    blu=255;
+	    dblu *= -1;
+	}
+
+
+	for (int i=NUM_LEDS-1;i>=0;i--)
+	{
+		leds[i+1][0]=leds[i][0];
+		leds[i+1][1]=leds[i][1];
+		leds[i+1][2]=leds[i][2];
+		SetRGBColor(i+1, leds[i+1][0],leds[i+1][1],leds[i+1][2]);
+	}
+	leds[0][0] = red;
+	leds[0][1] = grn;
+	leds[0][2] = blu;
+	SetRGBColor(0, red, grn, blu);
+
+}
+
+
+int main()
+{
+	XGpio input, output;
+	   int switch_data = 0;
+
+	   XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);	//initialize input XGpio variable
+	   XGpio_Initialize(&output, XPAR_AXI_GPIO_1_DEVICE_ID);	//initialize output XGpio variable
+	   XGpio_SetDataDirection(&input, 1, 0xF);			//set first channel tristate buffer to input
+	   XGpio_SetDataDirection(&input, 2, 0xF);			//set second channel tristate buffer to input
+	   XGpio_SetDataDirection(&output, 1, 0x0);		//set first channel tristate buffer to output
+
+	EnableLEDs();
+	int count=0;
+	int ledOn=0;
+
+	for (int i=NUM_LEDS-1;i>=0;i--)
+		{
+			leds[i+1][0]=127;
+			leds[i+1][1]=255;
+			leds[i+1][2]=0;
+		}
+
+	while(1)
+	{
+		  count+=1;
+	      switch_data = XGpio_DiscreteRead(&input, 2);	//get switch data
+
+	      //if (count==10000)
+	      if (switch_data&1)
+	      {
+	    	  switch_data|=0x80;
+	    	  mytest();
+	      }
+	      //if (count == 20000)
+	      if (switch_data&2)
+	      {
+	    	  switch_data|=0x40;
+	    	  test2();
+	    	  for (int i=0;i<500000;i++); // delay
+	          count = 0;
+	      }
+	      if (ledOn && ((switch_data&4)==0))
+	      {
+	    	  switch_data|=0x20;
+	    	  DisableLEDs();
+	    	  //clearLEDs(NUM_LEDS);
+	    	  ledOn=0;
+	      }
+	      if ((!ledOn) && ((switch_data&4)>0))
+	      {
+	    	  switch_data|=0x10;
+	    	  EnableLEDs();
+	    	  ledOn=1;
+	      }
+	      XGpio_DiscreteWrite(&output, 1, switch_data);	//write switch data to the LEDs
+	}
+
+
+    return 0;
+}
+

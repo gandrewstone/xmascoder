@@ -1,0 +1,104 @@
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+      font-weight: normal;
+      font-size: 140%;
+}
+
+.chooseLang {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.langChoiceL {
+    flex: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.langChoiceR {
+    flex: 50%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.langtitle {
+    display: block;
+    margin-right: 0;
+}
+
+.cheatsheet {
+    text-align: left;
+    max-width: 1000px;
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+}
+
+.fbGood {
+    color: green;
+}
+.fbBad {
+    color: red;
+}
+
+#scriptOutput {
+    background-color: #efefef;
+    border: 1px solid #999;
+    display: block;
+    margin:4px, 4px;
+    padding:4px;
+    max-height: 50em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120em;
+}
+
+#lightShow {
+    width: 1200;
+    height: 600;
+}
+
+
+#editor {
+    min-height: 25em;
+    height: 75%;
+    width: 120em;
+    margin:8px, 8px, 8px, 8px;
+    padding:8px;
+    border: 1px solid #999;
+}
+
+#blocklyDiv {
+    height: 500px;
+    min-width: 1024px;
+    width: 90%;
+}
+
+.lastLog {
+    background-color: #efefbb;
+}
+
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
+input.visually-hidden:focus + label {
+  outline: thin dotted;
+}
+input.visually-hidden:focus-within + label {
+  outline: thin dotted;
+}

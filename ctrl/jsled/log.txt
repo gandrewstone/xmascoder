@@ -1,0 +1,1962 @@
+log initialized
+V8 initialized
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<100;i++)
+{
+  SetLight(i,0,0,0xff);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<100;i++)
+{
+  SetLight(i,0,0,0xff);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<100;i++)
+{
+  SetLight(i,0,0,0xff);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<100;i++)
+{
+  SetLight(i,0,0,0xff);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<100;i++)
+{
+  SetLight(i,0,0,0xff);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined
+V8 isolated context created
+script:
+4 + 5
+SetLight(0,0xff,0,0);
+SetLight(1,0,0xff,0);
+SetLight(2,0,0,0xff);
+SetManyLights(3,50,0xff,0xff,0);
+SetManyLights(50,450,0,0,0);
+//var x = new Uint32Array([0xffff0000,0x00ff00ff]);
+//SetLights(0,x);
+//foo();
+UpdateLights();
+
+for (i=0;i<500;i++)
+{
+  SetLight(i,0,0,i%255);
+  UpdateLights();
+}
+
+Script read
+undefined

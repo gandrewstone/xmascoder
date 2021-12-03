@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <meta charset="utf-8">
+  <title>Christmas Coder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="manifest" href="/site.webmanifest" />
+</head>    
+  <body>
+    <center><h1><img src="favicon.svg" width="64" height="64"/>Christmas Coder!</h1></center>
+    <center><big>Choose Your Language:</big></center>
+    <center><div class="chooseLang"><div class="langChoiceL"><h2 class="langtitle">Blockly</h2><a href="/blockly.html"><img src="images/blockly.png"></img></a></div><div class="langChoiceR"><h2>Javascript</h2><a href="/js.html"><img src="images/javascript.png"></img></a></div></div></center>
+    <center>
+    <big><big><strong>Now Playing:</strong></big></big>
+      <span id="nowplaying"></span>
+      <div>
+        <canvas id="lightShow" width="1024" height="100"></canvas>
+      </div>
+      <h2>Play Queue</h2>
+      <table id="playQ"></table></center>
+     <center>
+      <h2>Live video</h2>
+      <iframe width="700" height="500" src="https://www.youtube.com/embed/live_stream?channel=UCFTBMfl2Tv53KuQ6lAtQiuw&autoplay=1" frameborder="0" allowfullscreen></iframe>
+      </center>
+    <center>
+    <h2> What is this? </h2>
+    <p>I have set up a Christmas tree with 800 individually controllable any color Christmas lights.</p>
+    <p>This web site lets you write programs to turn on the lights in cool patterns!</p>
+    <p>There's a "simulator" so you can see what your program might do.</p>
+    <p>Then you can click "Run on my tree!" to send it to the real thing (live stream is delayed for 15-30 seconds).</p>
+    <p>You can do it using a drag-n-drop language by Google called <a href="https://developers.google.com/blockly/">Blockly</a> (similar to <a href="https://scratch.mit.edu">Scratch</a>), or in Javascript.</p>
+    </center>
+    <script src="acorn_interpreter.js"></script>
+    <script src="ledsim.js"></script>
+    <script src="ledcommon.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

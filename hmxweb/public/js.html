@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Christmas Coder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="manifest" href="/site.webmanifest" />
+  <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="acorn_interpreter.js"></script>
+  <script src="jszip.min.js"></script>
+  <script src="FileSaver.min.js"></script>
+</head>    
+  <body><center>
+      <h1><img src="favicon.svg" width="64" height="64"/><a href="/">Christmas Coder!</a></h1>
+      <div id="scriptErrors">Click the script named "help" below to get started!</div>     
+      <div>
+        <big><strong>Now Playing: </strong></big>
+        <span id="nowplaying"></span>
+        </div>
+      <div><strong>Queue: </strong><span id="playQ"></span></div>
+      <br></br>
+      <div>
+    <button type="button" onclick="simulateScript(editor.getValue())">Try it now!</button>
+    <button type="button" onclick="abortScript()">abort</button>
+    <button type="button" onclick="sendScript(editor.getValue(),document.getElementById('author').value,document.getElementById('scriptTitle').value,document.getElementById('scriptErrors'))">Run on my tree!</button>
+    <button type="button" onclick="saveScript(document.getElementById('scriptTitle').value, editor.getValue(), document.getElementById('scriptErrors'))">save</button>
+    <button type="button" onclick="deleteScript(document.getElementById('scriptTitle').value, editor.getValue())">delete</button>
+    <button type="button" onclick="newScript()">new</button>
+    <button type="button" onclick="zipScripts()">backup</button>
+    <input  type="file" id="restoreFile" accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed,.js,.blockly" multiple style="display:none">
+    <button id="restoreButton">restore</button>    
+    </div>
+    <big><strong>Simulation Area</strong></big>
+    <div>
+      <canvas id="lightShow" width="1200" height="120"></canvas>
+    </div>
+    <h3>Script Output</h3>
+    <div id="scriptOutput"></div>
+    <br/>
+    <div>Title:<input type="text" id="scriptTitle" size="50"></input>  Author:<input type="text" id="author" size="30"></input></div>
+    <div id="editor"></div>
+    <h3>Cheat Sheet</h3>
+    <code class="cheatsheet"><pre>
+    delay(milliseconds); // Push your changes to the bulbs AND wait for this time
+    delayUntil(milliseconds); // Push your changes to the bulbs AND wait until this many milliseconds from the beginning
+    updateLights(); // Push your changes to the bulbs without waiting
+    print("Write any message for debugging (appears below)");
+    
+    setLight(index,'#ff0000'); setLight(index,red 0-255, green, blue); // Set 1 led
+    setLights(index , bulb count, 255,255,255);  // Set many LEDs to 1 color
+    fadeLights(index, bulb count, fadetime, 255,0,80, stride); // Smoothly fade LEDs over fadetime ms. Stride of 2 means every other bulb
+    rotateLights(index, bulb count, stride);  // Color of each bulb is set to the value of the prior one.  Negative stride is allowed.
+
+    // In the simulation, an unfilled circle means you set the bulb color but haven't "delay"ed or "updateLights", so that color
+    // is not actually shown yet!
+    </pre></code>
+    <h3>Saved Scripts</h3>
+    <div id="availableScripts"></div>        
+    <h3>Example Scripts</h3>
+    <div id="exampleScripts"></div>        
+    <script src="ledsim.js"></script>
+    <script src="ledcommon.js"></script>
+    <script src="ledjavascript.js"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/clouds");
+    editor.getSession().setMode("ace/mode/javascript");
+    //editor.setOptions({});
+    editor.getSession().setTabSize(4);
+    editor.resize();
+    editor.clearSelection();
+</script>
+  </center></body>  
+</html>
