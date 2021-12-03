@@ -1,0 +1,13 @@
+Designator,Manufacturer Part Number or Seeed SKU,Qty,Link
+IC1,TS30013-M050QFNR,1,https://www.digikey.com/en/products/detail/semtech-corporation/TS30013-M050QFNR/5415614
+IC2,NC7WZ17P6X,1,https://www.digikey.com/en/products/detail/on-semiconductor/NC7WZ17P6X/965445
+Z1,1SMB5930BT3G,1,https://www.digikey.com/en/products/detail/on-semiconductor/1SMB5930BT3G/918150
+"TVS1, TVS2",DESD5V0U1BL-7B,2,https://www.digikey.com/en/products/detail/diodes-incorporated/desd5v0u1bl-7b/5306127
+Z2,MMSZ5231BT1G,1,OPL or https://www.digikey.com/en/products/detail/on-semiconductor/mmsz5231bt3g/5404367
+L1,SRN5040TA-4R7M,1,https://www.digikey.com/en/products/detail/bourns-inc/srn5040ta-4r7m/9653874
+"C1, C2",GRM188R71H104KA93D,2,OPL
+C3,CL31A106KBHNNNE,1,OPL
+"C4,C5,C6,C7",GRM188R61A226ME15D,4,OPL
+U$3,1969806-1,1,https://www.te.com/usa-en/product-1969806-1.html
+F1,3412.0121.11,,https://www.digikey.com/en/products/detail/schurter-inc/3412.0121.11/9094737
+D2,RB051MM-2YTR,1,OPL
