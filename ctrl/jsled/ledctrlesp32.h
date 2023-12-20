@@ -44,6 +44,9 @@ public:
     // Rotates LEDS, without disturbing the fading (fading moves along too).  Negative stride goes backwards.
     void Rotate(unsigned int i, unsigned int count, int stride, bool show = false);
 
+    // Sets the embedded microsecond count (for cross device sync).
+    bool SetTime(uint64_t time);
+
     bool Sync(int timeout=1000*1000);  // Wait for completion of prior commands, max timeout ms
     bool SyncDelay(int minWaitUSeconds, int timeout=1000*1000);  // Wait for completion of prior commands for a minimum time
     bool DelayUntil(int msSinceStart);  // Tell device to wait until a certain # of ms since connection opened.

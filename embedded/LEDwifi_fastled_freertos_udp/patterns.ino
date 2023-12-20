@@ -3,6 +3,14 @@
 
 extern int dimmer;
 
+
+uint64_t pauseMicros = 0;
+
+void aniClockChange()
+{
+  pauseMicros = micros64();  // wake up right now, the clock was reset
+}
+
 void faderTest()
 {
   Debug.print(DBG_INFO, "Fader Test");
@@ -109,7 +117,6 @@ void setXmasCols()
 void gentleAlternateFade(uint64_t now)
 {
   int c=-1;
-  static uint64_t pauseMicros = 0;
   if (!fader) return;
   size_t fadeLength = 2000;
   size_t pauseLength = 10000;
@@ -136,7 +143,6 @@ void gentleAlternateFade(uint64_t now)
 
 void colHold(uint64_t now, bool sparkle = true)
 {
-  static uint64_t pauseMicros = 0;
   const int NumSparkles = NumLeds/40;
   if (!fader) return;
   size_t fadeLength = 1000;
@@ -185,7 +191,6 @@ void slowTrails(uint64_t now)
 {
   int c=-1;
   int chainPos = 0;
-  static uint64_t pauseMicros = 0;
   static int trailLen = 16;
   if (!fader) return;
   size_t fadeLength = 30;
@@ -224,7 +229,6 @@ void multiColTrails(uint64_t now)
 {
   int c=-1;
   int chainPos = 0;
-  static uint64_t pauseMicros = 0;
   static int trailLen = 16;
   if (!fader) return;
   size_t fadeLength = 30;
@@ -273,7 +277,6 @@ void multiColMarquee(uint64_t now, int slowFactor = 10)
 {
   int c=-1;
   int chainPos = 0;
-  static uint64_t pauseMicros = 0;
   static int trailLen = 16;
   if (!fader) return;
   size_t fadeLength = 30;

@@ -84,6 +84,12 @@ class CmdSync
     uint8_t  cmd;
     uint32_t cookie;
 };
+class CmdSetTime
+{
+  public:
+    uint8_t  cmd;
+    uint64_t time;
+};
 #pragma pack(pop)
 
 enum
@@ -99,6 +105,7 @@ enum
   CMD_FADE_PIXELS = 8,
   CMD_YANK_N_PIXEL = 9,
   CMD_ROTATE = 10,
+  CMD_SETTIME = 11,
   CMD_SHOW = 0x80,
 };
 
@@ -422,6 +429,21 @@ void LedCtrl::SetLeds(unsigned int pxIdx, unsigned int count, uint32_t *pixcols,
     enqueueCmd( (uint8_t*) buf, total, show);
     runningTotal -= amtThisTime;
     }
+}
+
+
+bool LedCtrl::SetTime(uint64_t time)
+{
+    CmdSetTime* p = (CmdSetTime*) buf;
+    p->cmd = CMD_SETTIME;
+    p->time = time;
+
+    if (enqueueCmd((uint8_t*)buf, sizeof(CmdSetTime), true) != sizeof(CmdSetTime))
+    {
+        printf("sync send failed\n");
+        return false;
+    }
+    return true;
 }
 
 bool LedCtrl::Sync(int timeout)

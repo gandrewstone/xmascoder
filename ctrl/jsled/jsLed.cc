@@ -564,7 +564,8 @@ int main(int argc, char *argv[])
     fprintf(logfd, "log initialized\n");
     fflush(logfd);
 
-    const char* hwIp = "dancer.local";
+    //const char* hwIp = "dancer.local";
+    const char* hwIp = "cupid.local";
     if (argc > 1) hwIp = argv[1];
 
     //LedCtrl ledctrl(NUMLEDS);
@@ -573,6 +574,13 @@ int main(int argc, char *argv[])
     LedCtrl ledctrl(hwIp, NUMLEDS);
     //LedCtrl ledctrl("192.168.0.53", NUMLEDS);
     leds = &ledctrl;
+
+    //leds->SetTime(80000000UL);
+    //leds->SetTime(10000000UL);
+    //leds->SetTime(200000000UL);
+    leds->SetTime(0UL);
+
+    
     // Initialize V8.
     v8::V8::InitializeICUDefaultLocation(argv[0]);
     v8::V8::InitializeExternalStartupData(argv[0]);

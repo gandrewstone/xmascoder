@@ -13,7 +13,12 @@
 
 #define WIFI 1
 #define FADE_STEP_MS 10  // Convert milliseconds to steps of fading
+#define WIFI_CHECK_MS 10000
 const char compileDate[] = __DATE__ " " __TIME__;
+
+const uint64_t MaxNetworkQuietTime = 10000000UL;  // 10 seconds
+
+const uint64_t NOT_CONNECTED_RETRY_INTERVAL_SECONDS = 15;
 
 // Pick 1 UDP API
 #define UDP_ASYNC
@@ -77,12 +82,15 @@ ported for sparkfun esp32
 const int LedCtrlPort = 1225;
 const int LedCtrlMaxClients = 2;
 const String ssid     = "xmascoder";
+//const String ssid = "xyzzy";
 const String password = "";
 // Change this to configure what the minimum signal strength you are willing to connect to is
 const int MinRssi = -75;
 
 const int OnboardLed = 2;
 const int LevelShiftEnable = 32;
+
+int64_t timeOffset = 0; // set to synchronize multiple devices to the same internal time
 
 #pragma GCC diagnostic pop
 
@@ -186,13 +194,14 @@ void AdvertiseServices(const char *MyName)
 // DISCONNECTS from WIFI!!!
 String AnalyzeWiFis(String preferred = String())
 {
+    Serial.println("Wifi enter scan mode");
     // Set WiFi to station mode and disconnect from an AP if it was previously connected
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
     delay(100);
-
+    Serial.println("Wifi scan begin");
     int n = WiFi.scanNetworks();
-    Serial.println("scan done");
+    Serial.println("Wifi scan done");
     if (n == 0) 
     {
         Serial.println("no networks found");
@@ -224,21 +233,35 @@ String AnalyzeWiFis(String preferred = String())
         if ((preferredIdx >= 0) && WiFi.RSSI(preferredIdx) >= MinRssi) return preferred;
         // Otherwise return the strongest open connection
         if (maxRssiIdx != -1)
-            return WiFi.SSID(maxRssiIdx);
+          return WiFi.SSID(maxRssiIdx);
     }
     return String();
+}
+
+bool isConnected = false;
+void OnInitialConnect()
+{
+  isConnected = true;
+  Serial.println("");
+  Serial.println("WiFi connected.");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+  AdvertiseServices(BoardName());
+  server.setNoDelay(true);
+  server.begin();
 }
 
 void WiFiConnector()
 {
     if (WiFi.status() != WL_CONNECTED)
     {
-        Lock lock(faderMutex);
+        isConnected = false;
         Serial.println(WiFi.status());
         Serial.print("I am ");
         Serial.println(configData.boardName);
         String connectTo = AnalyzeWiFis(String(ssid));
-    
+        Serial.println("Analyze WiFis done");
+        Lock lock(faderMutex);
         if (connectTo != "")
         {
             if ((connectTo == ssid)&&(password != ""))  WiFi.begin(ssid.c_str(), password.c_str());
@@ -247,7 +270,7 @@ void WiFiConnector()
             Serial.print("Connecting to ");
             Serial.println(connectTo);
             size_t tries = 0;
-            while ((WiFi.status() != WL_CONNECTED) && (tries < 2))
+            while ((WiFi.status() != WL_CONNECTED) && (tries < 10))
             {
                 digitalWrite(OnboardLed,tries&1);  
                 delay(100);
@@ -258,22 +281,22 @@ void WiFiConnector()
 
             if (WiFi.status() == WL_CONNECTED)
             {
-                Serial.println("");
-                Serial.println("WiFi connected.");
-                Serial.println("IP address: ");
-                Serial.println(WiFi.localIP());
-                AdvertiseServices(BoardName());
-                server.setNoDelay(true);
-                server.begin();
+               
             }
             else
-                Serial.println("WiFi cannot connect");
+            {
+                Serial.print("WiFi cannot connect.  Error: ");
+                Serial.print(WiFi.status());
+                Serial.println();
+            }
         }
         else
         {
           Debug.print(DBG_INFO,"No WiFi candidates");
         }
     }
+    
+    if ((WiFi.status() == WL_CONNECTED)&&(!isConnected)) OnInitialConnect();
 }
 
 
@@ -381,6 +404,17 @@ void faderLoopTask(void * parameter)
   }
 }
 
+void connectTask(void * parameter)
+{
+  while(1)
+  {
+    {
+        WiFiConnector();
+    }
+    vTaskDelay(WIFI_CHECK_MS / portTICK_PERIOD_MS);
+  }
+}
+
 void LoopTask(void * parameter);
 
 void setup()
@@ -406,13 +440,13 @@ void setup()
    
     dumpSysInfo();
   
-    if (false) // configData.magic != 7227)
+    if (configData.magic != 7227)
     {
-        strcpy(configData.boardName, "dancer");
+        strcpy(configData.boardName, "dasher");
         configData.numStrands = 6;
         configData.ledsPerStrand = 500;
-        //WriteEEPROM();
-        //Debug.print(DBG_INFO, "Overwrote EEPROM with defaults");
+        WriteEEPROM();
+        Debug.print(DBG_INFO, "Overwrote EEPROM with defaults");
     }
     if (false) // configData.magic != 7227)
     {
@@ -477,7 +511,9 @@ void setup()
 
     // periodically refreshes the LEDs and displays their current value
     xTaskCreate(faderLoopTask, "FaderLoop", 5000, NULL, 5, NULL);  // if higher priority then LoopTask, crash
+    xTaskCreate(connectTask, "ConnectLoop", 3000, NULL, 10, NULL);
     // xTaskCreate(LoopTask, "Loop", 40000, NULL, 1, NULL);
+    Serial.println("Setup complete");
 }
 
 
@@ -539,11 +575,12 @@ enum
   CMD_FADELEDS = 8,
   CMD_YANKNLED = 9,
   CMD_ROTATE = 10,   // start, count, jump (negative implies direction)
+  CMD_SETTIME = 11,
 };
 
 uint64_t micros64()
 {
-  return esp_timer_get_time();
+  return esp_timer_get_time() + timeOffset;
 #if 0
     static int64_t rolls = 0;
     static uint32_t lastmicros = 0;
@@ -747,7 +784,7 @@ class BinaryProtocolPacketHandler
           uint16_t ledIdx;
           if (2 != read((uint8_t*) &ledIdx, 2)) 
           {
-            Debug.print(DBG_INFO, "bad read");
+            Debug.print(DBG_INFO, "setleds ledIdx bad read");
             return;
           }
           uint8_t strandIdx = ledIdx >> 12;
@@ -755,7 +792,7 @@ class BinaryProtocolPacketHandler
           uint16_t count;
           if (2 != read((uint8_t*) &count, 2)) 
           {
-            Debug.print(DBG_INFO, "bad read");
+            Debug.print(DBG_INFO, "setleds count bad read");
             return;
           }
   
@@ -1026,6 +1063,23 @@ class BinaryProtocolPacketHandler
         case CMD_DELAY:
         // Implemented after the flush
         break;
+        case CMD_SETTIME:
+        {
+          int64_t now = micros64()-timeOffset;  // undo current timeoffset delta
+
+          int64_t desired;
+          int amtRead = read((uint8_t*) &desired, sizeof(int64_t));
+          if (8 != amtRead) 
+          {
+            Debug.print(DBG_INFO, "settime bad read %d", amtRead);
+            return;
+          }
+          // When someone calls micros64() they get now + timeOffset, so ->  now + desired - now == now
+          timeOffset = desired - now;
+          Debug.print(DBG_INFO, "settime offset now %llx", timeOffset);
+          aniClockChange();
+        } break;
+
         case CMD_SYNC:
         {
           int32_t cookie;
@@ -1263,16 +1317,19 @@ void LoopTask(void * parameter)
 {
   while(1)
   {
-    WiFiConnector();
+    // WiFiConnector();
     if (WiFi.status() != WL_CONNECTED)
     {
       Serial.println("No connection animation");
-      uint64_t noCnxnTime = 50*60;
+      uint64_t noCnxnTime = NOT_CONNECTED_RETRY_INTERVAL_SECONDS;  // 5 minutes
       noCnxnTime *= 1000*1000;
       uint64_t noCnxnAniTime = micros64() + noCnxnTime;
       while (micros64() < noCnxnAniTime) noConnectionAnimation();
       Serial.println("No connection animation done");
     }
+    else
+    {
+      Serial.println("Connected");
     while (WiFi.status() == WL_CONNECTED)
     {
 #ifdef UDP_SOCKET      
@@ -1341,7 +1398,7 @@ void LoopTask(void * parameter)
       if (udp.listen(LedCtrlPort))
       {
         Debug.print(DBG_INFO, "Registered UDP listener");
-        udp.onPacket([&udp](AsyncUDPPacket packet)
+        udp.onPacket([&udp](AsyncUDPPacket packet)  // happening continuously in the background
         {
           BinaryProtocolPacketHandler(udp, packet).handle();
           //if ((npkts&31)==0) Debug.print(DBG_INFO, "%lu: UDP size %d", npkts, packet.length());
@@ -1350,18 +1407,21 @@ void LoopTask(void * parameter)
         });
       }
       
-      while(WiFi.status() == WL_CONNECTED)
+      while(WiFi.status() == WL_CONNECTED)  // this can be an inf loop because the udp onpacket is a background callback 
       {    
-        if (micros64() > lastPkt + 30000000UL)  // If no control for 30 seconds, do you own ani
+        if (micros64() > lastPkt + MaxNetworkQuietTime)  // If no control for 30 seconds, do you own ani
         {
-            noConnectionAnimation();
+           //Debug.print(DBG_INFO, "waited");
+           noConnectionAnimation();
         }
         else
         {
-            vTaskDelay(10000 / portTICK_PERIOD_MS);
+          //Debug.print(DBG_INFO, "waiting");
+          vTaskDelay(2000 / portTICK_PERIOD_MS);
         }
       }
 #endif
     }
+  }
   }
 }
