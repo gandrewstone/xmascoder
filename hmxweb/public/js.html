@@ -42,18 +42,22 @@
     <div id="editor"></div>
     <h3>Cheat Sheet</h3>
     <code class="cheatsheet"><pre>
-    delay(milliseconds); // Push your changes to the bulbs AND wait for this time
-    delayUntil(milliseconds); // Push your changes to the bulbs AND wait until this many milliseconds from the beginning
-    updateLights(); // Push your changes to the bulbs without waiting
+    delay(milliseconds); // Send color changes AND wait for this time
+    delayUntil(milliseconds); // Send color changes AND wait until this many milliseconds from the beginning
+    updateLights(); // Send color changes
     print("Write any message for debugging (appears below)");
     
-    setLight(index,'#ff0000'); setLight(index,red 0-255, green, blue); // Set 1 led
+    setLight(index,'#ff0000');  // Set 1 bulb, web style colors
+    setLight(index,red 0-255, green, blue); // Also sets 1 bulb
     setLights(index , bulb count, 255,255,255);  // Set many LEDs to 1 color
-    fadeLights(index, bulb count, fadetime, 255,0,80, stride); // Smoothly fade LEDs over fadetime ms. Stride of 2 means every other bulb
-    rotateLights(index, bulb count, stride);  // Color of each bulb is set to the value of the prior one.  Negative stride is allowed.
 
-    // In the simulation, an unfilled circle means you set the bulb color but haven't "delay"ed or "updateLights", so that color
-    // is not actually shown yet!
+    // Smoothly fade LEDs over fadetime ms. Stride of 2 means every other bulb
+    fadeLights(index, bulb count, fadetime, 255,0,80, stride);
+    // Color of each bulb is set to the value of the prior one.  Negative stride is allowed.
+    rotateLights(index, bulb count, stride);
+
+    // In the simulation, an unfilled circle means you set the bulb color but that color
+    // is not actually shown yet! Call delay or updateLights.
     </pre></code>
     <h3>Saved Scripts</h3>
     <div id="availableScripts"></div>        

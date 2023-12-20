@@ -35,6 +35,7 @@ sudo a2enmod lbmethod_byrequests
 
 ##### Apache2 configuration
 
+/etc/apache2/sites-available# cat 000-default.conf
 
 ```
 <VirtualHost *:80>
@@ -81,3 +82,6 @@ Make pm2 autostart:
 
 pm2 save
 (as root) pm2 startup
+
+
+I've dumped a working config into dump.pm2

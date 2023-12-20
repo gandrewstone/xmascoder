@@ -61,7 +61,7 @@ print = function(s, waitTime, callback)
     if (waitTime)
     {
         var prior = output.innerHTML;
-        
+
         output.innerHTML = prior + "<span class='lastLog'>" + s + "</span>" + "<br/>";
         window.setTimeout(function() {
             output.innerHTML = prior + s + "<br/>";
@@ -69,7 +69,10 @@ print = function(s, waitTime, callback)
         }, waitTime);
     }
     else
+    {
         output.innerHTML = output.innerHTML + s + "<br/>";
+        callback();
+    }
 }
 
 

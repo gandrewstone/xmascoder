@@ -58,7 +58,6 @@ h1 {
     max-height: 50em;
     overflow-x: hidden;
     overflow-y: auto;
-    width: 120em;
 }
 
 #lightShow {
@@ -70,7 +69,6 @@ h1 {
 #editor {
     min-height: 25em;
     height: 75%;
-    width: 120em;
     margin:8px, 8px, 8px, 8px;
     padding:8px;
     border: 1px solid #999;
