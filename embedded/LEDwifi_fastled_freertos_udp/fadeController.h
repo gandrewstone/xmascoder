@@ -30,6 +30,7 @@ class FadeController
 
   /*?<method> Change the color and the fade target right now </method> */
   void set(int led, const CRGB &color);
+  CRGB get(int led) { if ((led < numLeds)&&(led>=0)) return mLeds[led]; else return CRGB(0,0,0); }
 
   /*?<method> Rotate: Rotate the bulb and the fade information (marquee effect)  </method> */
   void rotate(int start, int count, int jump);

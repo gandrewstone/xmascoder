@@ -87,8 +87,13 @@ const int LevelShiftEnable = 32;
 #pragma GCC diagnostic pop
 
 const int MIN_CNXN_FILL_INTERVAL = 1000;
-#define DEFAULT_NUM_STRANDS 3 // COUNT_OF(strands);
-#define NUM_LEDS_PER_STRAND 300
+//#define DEFAULT_NUM_STRANDS 4 // COUNT_OF(strands);
+//#define NUM_LEDS_PER_STRAND 300
+
+#define DEFAULT_NUM_STRANDS 6 // COUNT_OF(strands);
+#define NUM_LEDS_PER_STRAND 500
+
+
 //#define NUM_LEDS (DEFAULT_NUM_STRANDS * NUM_LEDS_PER_STRAND)
 size_t NumLeds = 0;
 
@@ -102,6 +107,7 @@ FadeController *fader = nullptr;
 bool FLon = true;  // Turn off LED driving
 int64_t lastDelay = 0; 
 uint32_t delayUntilStart = 0;
+int dimmer = 1;
 
 typedef struct
 {
@@ -115,6 +121,7 @@ ConfigData configData;
 
 //**************************************************************************
 
+// debugging info 
 //extern volatile uint64_t fastLEDlastFillDuration;
 //extern volatile uint64_t fastLEDfillDuration;
 //extern volatile uint32_t fastLEDnumFills;
@@ -240,7 +247,7 @@ void WiFiConnector()
             Serial.print("Connecting to ");
             Serial.println(connectTo);
             size_t tries = 0;
-            while ((WiFi.status() != WL_CONNECTED) && (tries < 100))
+            while ((WiFi.status() != WL_CONNECTED) && (tries < 2))
             {
                 digitalWrite(OnboardLed,tries&1);  
                 delay(100);
@@ -301,22 +308,22 @@ bool initStrands()
     if (configData.numStrands > 4)
     {    
       FastLED.addLeds<WS2811, 17, RGB>(leds, 4 * configData.ledsPerStrand, configData.ledsPerStrand);
-      Debug.print(DBG_INFO,"Initialized strand 3 at pin 17 with %d LEDs", configData.ledsPerStrand);
+      Debug.print(DBG_INFO,"Initialized strand 4 at pin 17 with %d LEDs", configData.ledsPerStrand);
     }
     if (configData.numStrands > 5)
     {  
       FastLED.addLeds<WS2811, 18, RGB>(leds, 5 * configData.ledsPerStrand, configData.ledsPerStrand);
-      Debug.print(DBG_INFO,"Initialized strand 3 at pin 18 with %d LEDs", configData.ledsPerStrand);
+      Debug.print(DBG_INFO,"Initialized strand 5 at pin 18 with %d LEDs", configData.ledsPerStrand);
     }
     if (configData.numStrands > 6)
     {  
       FastLED.addLeds<WS2811, 21, RGB>(leds, 6 * configData.ledsPerStrand, configData.ledsPerStrand);
-      Debug.print(DBG_INFO,"Initialized strand 3 at pin 21 with %d LEDs", configData.ledsPerStrand);
+      Debug.print(DBG_INFO,"Initialized strand 6 at pin 21 with %d LEDs", configData.ledsPerStrand);
     }
     if (configData.numStrands > 7)
     {  
       FastLED.addLeds<WS2811, 22, RGB>(leds, 7 * configData.ledsPerStrand, configData.ledsPerStrand);
-      Debug.print(DBG_INFO,"Initialized strand 3 at pin 22 with %d LEDs", configData.ledsPerStrand);
+      Debug.print(DBG_INFO,"Initialized strand 7 at pin 22 with %d LEDs", configData.ledsPerStrand);
     }
   }
   return true;
@@ -399,9 +406,25 @@ void setup()
    
     dumpSysInfo();
   
-    if (configData.magic != 7227)
+    if (false) // configData.magic != 7227)
     {
         strcpy(configData.boardName, "dancer");
+        configData.numStrands = 6;
+        configData.ledsPerStrand = 500;
+        //WriteEEPROM();
+        //Debug.print(DBG_INFO, "Overwrote EEPROM with defaults");
+    }
+    if (false) // configData.magic != 7227)
+    {
+        strcpy(configData.boardName, "prancer");
+        configData.numStrands = 2;
+        configData.ledsPerStrand = 200;
+        WriteEEPROM();
+        Debug.print(DBG_INFO, "Overwrote EEPROM with defaults");
+    }
+    if (false) // configData.magic != 7227)
+    {
+        strcpy(configData.boardName, "vixen");
         configData.numStrands = DEFAULT_NUM_STRANDS;
         configData.ledsPerStrand = NUM_LEDS_PER_STRAND;
         WriteEEPROM();
@@ -429,11 +452,24 @@ void setup()
     digitalWrite(LevelShiftEnable, LOW);
     if (FLon) FastLED.show(); // Somehow if we don't show right away, all strands go permanently white
 
-    progress();
+    dimpurple();
+    //progress();
     //halloween();
     //quickTest();
 
     delay(10);
+
+    // Inside
+    if (strcmp(configData.boardName,"prancer")==0)
+    {
+      dimmer = 4;
+    }
+    else  // outside
+    {
+      dimmer = 1;
+    }
+    setStandardCols();
+    //setXmasCols();
 
     fader = new FadeController(leds, NumLeds);
     fader->init();
@@ -505,23 +541,26 @@ enum
   CMD_ROTATE = 10,   // start, count, jump (negative implies direction)
 };
 
-int64_t micros64()
+uint64_t micros64()
 {
+  return esp_timer_get_time();
+#if 0
     static int64_t rolls = 0;
     static uint32_t lastmicros = 0;
     uint32_t n = micros();
     //uint32_t p = n;
-    n += 0xFC000000UL;
+    //n += 0xFF000000UL;
     //Debug.print(DBG_INFO, "micros64 n:%lu -> %lu lastmicros: %lld", p, n, lastmicros);
     
     if (n < lastmicros) 
     {
       rolls += 0x100000000UL;
-      // Debug.print(DBG_INFO, "Rolled 0x%llx", rolls);
+      //Debug.print(DBG_INFO, "Rolled 0x%llx", rolls);
     }
     lastmicros = n;
     int64_t now = n;
     return (now+rolls);
+#endif
 }
 
 unsigned char readWait(WiFiClient& client)
@@ -672,7 +711,7 @@ class BinaryProtocolPacketHandler
           uint8_t red = read();
           uint8_t grn = read();
           uint8_t blu = read();
-          auto col = CRGB(red,grn,blu);
+          auto col = CRGB(red/dimmer,grn/dimmer,blu/dimmer);
   
           //Debug.print(DBG_INFO, "SETNLED count: %d, start %d:%d", count, strandIdx, ledIdx); 
   
@@ -739,7 +778,7 @@ class BinaryProtocolPacketHandler
             uint8_t red = read();
             uint8_t grn = read();
             uint8_t blu = read();
-            auto col = CRGB(red,grn,blu);
+            auto col = CRGB(red/dimmer,grn/dimmer,blu/dimmer);
             
             if (ledIdx < NumLeds)  // Even if we are off the end, keep looping because we need to read the data off the wire
             {
@@ -780,7 +819,7 @@ class BinaryProtocolPacketHandler
           uint8_t red = read();
           uint8_t grn = read();
           uint8_t blu = read();
-          auto col = CRGB(red,grn,blu);
+          auto col = CRGB(red/dimmer,grn/dimmer,blu/dimmer);
   
           //Debug.print(DBG_INFO, "YANKNLED count: %d, start %d:%d, color: (%d,%d,%d)", count, strandIdx, ledIdx, red,grn,blu); 
   
@@ -843,7 +882,7 @@ class BinaryProtocolPacketHandler
           uint8_t red = read();
           uint8_t grn = read();
           uint8_t blu = read();
-          auto col = CRGB(red,grn,blu);
+          auto col = CRGB(red/dimmer,grn/dimmer,blu/dimmer);
   
           Debug.print(DBG_INFO, "FADENLED count: %d, fadeCount: %d, start %d:%d, color: (%d,%d,%d)", count, fadeCount, strandIdx, ledIdx, red,grn,blu); 
   
@@ -920,7 +959,7 @@ class BinaryProtocolPacketHandler
             uint8_t red = read();
             uint8_t grn = read();
             uint8_t blu = read();
-            auto col = CRGB(red,grn,blu);
+            auto col = CRGB(red/dimmer,grn/dimmer,blu/dimmer);
             
             if (ledIdx < NumLeds)  // Even if we are off the end, keep looping because we need to read the data off the wire
             {
@@ -1087,6 +1126,31 @@ class BinaryProtocolPacketHandler
 
 
 
+void white()
+{
+  for (int32_t k=0;k<1000;k++)
+  {
+      for (int32_t i=0;i<NumLeds;i++)
+      {
+          leds[i] = CRGB(255,255,255);
+      }
+      if (FLon) FastLED.show();
+      delayMicroseconds(10000);
+  }
+}
+
+void dimpurple()
+{
+  for (int32_t k=0;k<1000;k++)
+  {
+      for (int32_t i=0;i<NumLeds;i++)
+      {
+          leds[i] = CRGB(32,8,32);
+      }
+      if (FLon) FastLED.show();
+      delayMicroseconds(1000);
+  }
+}
 
 void progress()  // And strand signal integrity test
 {
@@ -1112,6 +1176,48 @@ void progress()  // And strand signal integrity test
 }  
 
 void noConnectionAnimation()
+{
+  int64_t now = micros64();
+  now = now/1000000;  // convert to seconds
+  now = now/420;  // convert to 7 minute periods
+  static int curcolscheme = 0;
+  switch(now % 2)
+  {
+    case 0:
+       if (curcolscheme != 0)
+       {
+        curcolscheme = 0;
+        setStandardCols();
+       }
+    break;
+    case 1:
+       if (curcolscheme != 1)
+       {
+        curcolscheme = 1;
+        setXmasCols();
+       }
+    break;
+
+  }
+
+  if (strcmp(BoardName(),"comet")==0) signZing();
+  else if (strcmp(BoardName(),"prancer")==0) insideDefault();
+  else if (strcmp(BoardName(),"blitzen")==0) 
+  {
+    // Serial.println("no connection: running blitzen animation");
+    outsideDefault();
+  }
+  else if (strcmp(BoardName(),"vixen")==0) 
+  {
+    // Serial.println("no connection: running blitzen animation");
+    outsideDefault();
+  }
+  else outsideDefault();
+  // defaultNoConnectionAnimation();
+}
+
+
+void defaultNoConnectionAnimation()
 {
   if (!fader) return;
   size_t fadeLength = 100;
@@ -1158,6 +1264,15 @@ void LoopTask(void * parameter)
   while(1)
   {
     WiFiConnector();
+    if (WiFi.status() != WL_CONNECTED)
+    {
+      Serial.println("No connection animation");
+      uint64_t noCnxnTime = 50*60;
+      noCnxnTime *= 1000*1000;
+      uint64_t noCnxnAniTime = micros64() + noCnxnTime;
+      while (micros64() < noCnxnAniTime) noConnectionAnimation();
+      Serial.println("No connection animation done");
+    }
     while (WiFi.status() == WL_CONNECTED)
     {
 #ifdef UDP_SOCKET      
@@ -1248,7 +1363,5 @@ void LoopTask(void * parameter)
       }
 #endif
     }
-    
-    noConnectionAnimation();
   }
 }
